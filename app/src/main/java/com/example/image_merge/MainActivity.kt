@@ -8,27 +8,21 @@ import com.example.image_merge.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
      lateinit var binding: ActivityMainBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        var sayfam = binding.root
-        setContentView(sayfam)
+        var view = binding.root
+        setContentView(view)
 
         binding.button1Id.setOnClickListener{
             binding.imageView.visibility = View.VISIBLE
-
-//            var imageView = ImageView(this)
-            var imageResourceId1 = R.drawable.ktu
+            val imageResourceId1 = R.drawable.ktu
             binding.imageView.setImageResource(imageResourceId1)
-
         }
 
         binding.button2Id.setOnClickListener{
             binding.imageView.visibility = View.VISIBLE
-
-//            var imageView = ImageView(this)
-            var imageResourceId2 = R.drawable.seiko
+            val imageResourceId2 = R.drawable.seiko
             binding.imageView.setImageResource(imageResourceId2)
         }
 
